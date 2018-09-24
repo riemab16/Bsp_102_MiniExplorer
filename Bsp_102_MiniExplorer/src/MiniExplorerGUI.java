@@ -1,5 +1,5 @@
 
-import java.util.ArrayList;
+import javax.swing.AbstractListModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,12 +12,13 @@ import java.util.ArrayList;
  * @author ASUS
  */
 public class MiniExplorerGUI extends javax.swing.JFrame {
-    private ArrayList<File> datei = new ArrayList<File>();
+    private FileModel fmodel = new FileModel();
     /**
      * Creates new form MiniExplorerGUI
      */
     public MiniExplorerGUI() {
         initComponents();
+        liExplorer.setModel(fmodel);
     }
 
     /**
